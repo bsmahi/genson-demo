@@ -25,7 +25,7 @@
 </dependency>
 
 ```
-### Step3: Build a separate spring configuration class and include the following POJO databinding beans for the entire application.
+### Step3: Build a separate spring configuration class and include the following POJO databinding beans and `autowire` where it is required.
 ```java
 @Bean
 public Genson genson() {
