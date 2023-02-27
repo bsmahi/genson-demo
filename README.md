@@ -13,7 +13,7 @@ Let’s say you now had to serve JSON replacing Jackson with a library like Gens
     <version>${genson.version}</version>
 </dependency>
 
-<!--Extension depedency for customizing date and time -->
+<!--Extension dependency for customizing date and time -->
 <dependency>
     <groupId>com.owlike</groupId>
     <artifactId>genson-java-datetime</artifactId>
