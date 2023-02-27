@@ -6,7 +6,7 @@ Let’s say you now had to serve JSON replacing Jackson with a library like Gens
 
 ## Steps for implementing the Genson library in Spring Boot REST Api
 
-### Step1: Include the following Genson Maven dependency in the `pom.xml` and Gradle project, we should add the in the `build.gradle`
+### Step1 : Include the following Genson Maven dependency in the `pom.xml` and Gradle project, we should add the in the `build.gradle`
 
 ```xml
 <dependency>
@@ -21,7 +21,7 @@ For Gradle Project
 implementation group: 'com.owlike', name: 'genson', version: '1.6'
 ```
 
-### Step2: Since Spring MVC has default support for Jackson and is autoconfigured with it. Hence, we must `exclude Jackson dependency` from the web starter in the `pom.xml`.
+### Step2 : Since Spring MVC has default support for Jackson and is autoconfigured with it. Hence, we must `exclude Jackson dependency` from the web starter in the `pom.xml`.
 
 ```xml
 <dependency>
@@ -37,7 +37,7 @@ implementation group: 'com.owlike', name: 'genson', version: '1.6'
 
 ```
 
-### Step3: Build a separate spring configuration class and include the following POJO databinding beans and `autowire` where it is required.
+### Step3 : Build a separate spring configuration class and include the following POJO databinding beans and `autowire` where it is required.
 ```java
 import com.owlike.genson.Genson;
 import com.owlike.genson.GensonBuilder;
@@ -66,5 +66,5 @@ public class AppConfig {
 }
 
 ```
-### Note: We may additionally adapt/customize the Genson depending on the use case by defining the bean with fluent API methods.
+### Note : We may additionally adapt/customize the Genson depending on the use case by defining the bean with fluent API methods.
 
