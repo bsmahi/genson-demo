@@ -54,6 +54,7 @@ public class AppConfig {
         return new GensonBuilder()
                 .setHtmlSafe(true)
                 .setSkipNull(true)
+                .useBeanViews(true)
                 .create();
 
     }
