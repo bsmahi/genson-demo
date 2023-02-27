@@ -48,7 +48,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    //Several additional built-in fluent api methods may be defined.
+    // Several additional built-in fluent api methods may be defined.
     @Bean
     public Genson genson() {
         return new GensonBuilder()
