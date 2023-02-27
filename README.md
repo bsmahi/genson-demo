@@ -33,21 +33,29 @@ implementation group: 'com.owlike', name: 'genson', version: '1.6'
 
 ### Step3: Build a separate spring configuration class and include the following POJO databinding beans and `autowire` where it is required.
 ```java
-@Bean
-public Genson genson() {
-   return new GensonBuilder()
-               .useMethods(false)
-               .setHtmlSafe(true)
-               .setSkipNull(true)
-               
-               ...
-               ... // Several additional built-in fluent api methods may be defined. 
-               .create();
-}
+import com.owlike.genson.Genson;
+import com.owlike.genson.GensonBuilder;
+import com.owlike.genson.ext.spring.GensonMessageConverter;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-@Bean
-public com.owlike.genson.ext.spring.GensonMessageConverter gensonMessageConverter() {
-    return new com.owlike.genson.ext.spring.GensonMessageConverter(genson());
+@Configuration
+public class AppConfig {
+
+    //Several additional built-in fluent api methods may be defined.
+    @Bean
+    public Genson genson() {
+        return new GensonBuilder()
+                .setHtmlSafe(true)
+                .setSkipNull(true)
+                .create();
+
+    }
+
+    @Bean
+    public GensonMessageConverter gensonMessageConverter() {
+        return new GensonMessageConverter(genson());
+    }
 }
 
 ```
