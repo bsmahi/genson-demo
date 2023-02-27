@@ -18,7 +18,7 @@ Let’s say you now had to serve JSON replacing Jackson with a library like Gens
     <groupId>com.owlike</groupId>
     <artifactId>genson-java-datetime</artifactId>
     <version>${genson.version}</version>
- </dependency>
+</dependency>
 
 ```
 For Gradle Project
