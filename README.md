@@ -1,4 +1,10 @@
-# Steps for implementing the Genson library in Spring Boot REST Api
+
+
+# Problem Statement
+We’re going to assume we already have a simple REST API built with Spring Boot, correctly implemented, and able to serve JSON with Jackson.
+Let’s say you now had to serve JSON replacing Jackson with a library like Genson: https://github.com/owlike/genson - what would you implement to be able to do that? Let’s specifically focus on the Spring config aspect of this implementation, of course.
+
+## Steps for implementing the Genson library in Spring Boot REST Api
 
 ### Step1: Include the following Genson Maven dependency in the `pom.xml` and Gradle project, we should add the in the `build.gradle`
 
