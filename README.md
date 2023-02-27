@@ -32,9 +32,12 @@
 @Bean
 public Genson genson() {
    return new GensonBuilder()
+               .useMethods(false)
                .setHtmlSafe(true)
                .setSkipNull(true)
-               .useBeanViews(true)
+               
+               ...
+               ... // Several additional built-in fluent api methods may be defined. 
                .create();
 }
 
