@@ -13,6 +13,13 @@ Let’s say you now had to serve JSON replacing Jackson with a library like Gens
     <version>${genson.version}</version>
 </dependency>
 
+<!--Extension depedency for customizing date and time -->
+<dependency>
+	<groupId>com.owlike</groupId>
+	<artifactId>genson-java-datetime</artifactId>
+	<version>${genson.version}</version>
+ </dependency>
+
 ```
 For Gradle Project
 ```
@@ -53,6 +60,7 @@ public class AppConfig {
                 .setHtmlSafe(true)
                 .setSkipNull(true)
                 .useBeanViews(true)
+                .withBundle(new JavaDateTimeBundle())
                 .create();
 
     }
