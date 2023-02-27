@@ -1,6 +1,6 @@
 # Steps for implementing the Genson library in Spring Boot REST Api
 
-### Step1: Include the following Genson Maven dependency in the `pom.xml` 
+### Step1: Include the following Genson Maven dependency in the `pom.xml` and Gradle project, we should add the in the `build.gradle`
 
 ```xml
 <dependency>
@@ -9,6 +9,10 @@
     <version>${genson.version}</version>
 </dependency>
 
+```
+For Gradle Project
+```
+implementation group: 'com.owlike', name: 'genson', version: '1.6'
 ```
 
 ### Step2: Since Spring MVC has default support for Jackson and is autoconfigured with it. Hence, we must exclude Jackson dependency from the web starter in the `pom.xml`.
