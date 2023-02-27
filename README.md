@@ -15,9 +15,9 @@ Let’s say you now had to serve JSON replacing Jackson with a library like Gens
 
 <!--Extension depedency for customizing date and time -->
 <dependency>
-	<groupId>com.owlike</groupId>
-	<artifactId>genson-java-datetime</artifactId>
-	<version>${genson.version}</version>
+    <groupId>com.owlike</groupId>
+    <artifactId>genson-java-datetime</artifactId>
+    <version>${genson.version}</version>
  </dependency>
 
 ```
