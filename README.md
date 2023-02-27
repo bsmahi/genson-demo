@@ -1,5 +1,3 @@
-
-
 # Problem Statement
 We’re going to assume we already have a simple REST API built with Spring Boot, correctly implemented, and able to serve JSON with Jackson.
 Let’s say you now had to serve JSON replacing Jackson with a library like Genson: https://github.com/owlike/genson - what would you implement to be able to do that? Let’s specifically focus on the Spring config aspect of this implementation, of course.
@@ -67,4 +65,6 @@ public class AppConfig {
 
 ```
 ### Note : We may additionally adapt/customize the Genson depending on the use case by defining the bean with fluent API methods.
+
+Example of the code: https://github.com/bsmahi/genson-springboot
 
